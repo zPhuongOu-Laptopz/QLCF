@@ -16,5 +16,18 @@ namespace QLCF
         {
             InitializeComponent();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            lbl_realTime.Text = DateTime.Now.ToString();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            
+            Login login = new Login();
+            login.ShowDialog();
+            
+        }
     }
 }
