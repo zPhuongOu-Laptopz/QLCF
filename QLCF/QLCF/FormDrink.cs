@@ -37,5 +37,52 @@ namespace QLCF
             cbb_drinkState.Text = drink.state.ToString();
 
         }
+
+        private int Validation(string dName, decimal price)
+        {
+            if (dName == null || dName == "" || dName == dName.Trim())
+            {
+                return -1;
+            }
+            else if (price == 0)
+            {
+                return -2;
+            }
+            return 0;
+        }
+
+        private void btn_addDrink_Click(object sender, EventArgs e)
+        {
+            int check = Validation(txt_drinkName.Text, num_price.Value);
+            if (check == -1)
+            {
+                MessageBox.Show("Vui lòng nhập tên nước uống!");
+            }
+            else if (check == -2)
+            {
+                MessageBox.Show("Vui lòng nhập giá tiền!");
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btn_editDrink_Click(object sender, EventArgs e)
+        {
+            int check = Validation(txt_drinkName.Text, num_price.Value);
+            if (check == -1)
+            {
+                MessageBox.Show("Vui lòng nhập tên nước uống!");
+            }
+            else if (check == -2)
+            {
+                MessageBox.Show("Vui lòng nhập giá tiền!");
+            }
+            else
+            {
+
+            }
+        }
     }
 }
