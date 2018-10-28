@@ -13,12 +13,18 @@ namespace QLCF
 {
     public partial class FormDrink : Form
     {
+        int Oid;
         public FormDrink()
         {
             InitializeComponent();
         }
 
         private void FormDrink_Load(object sender, EventArgs e)
+        {
+            reLoad();
+        }
+
+        private void reLoad()
         {
             List<Drink> list = new List<Drink>();
             list = Drink.SelectallObject();
@@ -29,18 +35,18 @@ namespace QLCF
         private void data_Drink_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = data_Drink.CurrentCell.RowIndex;
-            int id = Convert.ToInt32(data_Drink.Rows[index].Cells["id"].Value);
+            Oid = Convert.ToInt32(data_Drink.Rows[index].Cells["id"].Value);
             Drink drink = new Drink();
-            drink.SelectObjectwithID(id);
-            txt_drinkName.Text = drink.drinkName.ToString();
+            drink.SelectObjectwithID(Oid);
+            txt_drinkName.Text = drink.drinkName;
             num_price.Value = Convert.ToDecimal(drink.price);
-            cbb_drinkState.Text = drink.state.ToString();
+            cbb_drinkState.Text = drink.state;
 
         }
 
-        private int Validation(string dName, decimal price)
+        private int Validation(string dName, double price)
         {
-            if (dName == null || dName == "" || dName == dName.Trim())
+            if (dName == null || dName == "")
             {
                 return -1;
             }
@@ -53,7 +59,7 @@ namespace QLCF
 
         private void btn_addDrink_Click(object sender, EventArgs e)
         {
-            int check = Validation(txt_drinkName.Text, num_price.Value);
+            int check = Validation(txt_drinkName.Text, Convert.ToDouble(num_price.Value));
             if (check == -1)
             {
                 MessageBox.Show("Vui lòng nhập tên nước uống!");
@@ -64,13 +70,25 @@ namespace QLCF
             }
             else
             {
-
+                Drink drink = new Drink(txt_drinkName.Text, Convert.ToDouble(num_price.Value), cbb_drinkState.Text);
+                try
+                {
+                    drink.Insert();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tên nước uống không được trùng!");
+                }
+                finally
+                {
+                    reLoad();
+                }
             }
         }
 
         private void btn_editDrink_Click(object sender, EventArgs e)
         {
-            int check = Validation(txt_drinkName.Text, num_price.Value);
+            int check = Validation(txt_drinkName.Text, Convert.ToDouble(num_price.Value));
             if (check == -1)
             {
                 MessageBox.Show("Vui lòng nhập tên nước uống!");
@@ -81,8 +99,22 @@ namespace QLCF
             }
             else
             {
-
+                Drink drink = new Drink();
+                drink.SelectObjectwithID(Oid);
+                drink.drinkName = txt_drinkName.Text;
+                drink.price = Convert.ToDouble(num_price.Value);
+                drink.state = cbb_drinkState.Text;
+                drink.Update();
+                reLoad();
             }
+        }
+
+        private void btn_deleteDrink_Click(object sender, EventArgs e)
+        {
+            Drink drink = new Drink();
+            drink.SelectObjectwithID(Oid);
+            drink.Delete();
+            reLoad();
         }
     }
 }

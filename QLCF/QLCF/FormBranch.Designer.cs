@@ -64,6 +64,7 @@
             this.data_branch.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.data_branch.Location = new System.Drawing.Point(0, 273);
             this.data_branch.Name = "data_branch";
+            this.data_branch.ReadOnly = true;
             this.data_branch.RowTemplate.Height = 28;
             this.data_branch.Size = new System.Drawing.Size(800, 177);
             this.data_branch.TabIndex = 1;
@@ -143,6 +144,7 @@
             this.btn_editBranch.TabIndex = 4;
             this.btn_editBranch.Text = "Sửa thông tin";
             this.btn_editBranch.UseVisualStyleBackColor = true;
+            this.btn_editBranch.Click += new System.EventHandler(this.btn_editBranch_Click);
             // 
             // btn_deleteBranch
             // 

@@ -83,7 +83,7 @@ namespace QLCF.Model
             using (SqlConnection cn = new SqlConnection(connectionString))
             {
                 cn.Open();
-                string query = "INSERT INTO [dbo].[Food] VALUES (" + this.foodName + "," + this.price + "," + this.state + ")";
+                string query = "INSERT INTO [dbo].[Food] VALUES (N'" + this.foodName + "'," + this.price + ",N'" + this.state + "')";
 
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cmd.ExecuteNonQuery();
@@ -96,7 +96,7 @@ namespace QLCF.Model
             using (SqlConnection cn = new SqlConnection(connectionString))
             {
                 cn.Open();
-                string query = "UPDATE [dbo].[Food] SET [food] = " +  this.foodName + ",[price] = " + this.price + ",[state] = " + this.state + "WHERE id = " + this.id;
+                string query = "UPDATE [dbo].[Food] SET [food] = N'" +  this.foodName + "',[price] = " + this.price + ",[state] = N'" + this.state + "' WHERE id = " + this.id;
 
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cmd.ExecuteNonQuery();

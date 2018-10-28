@@ -60,7 +60,7 @@ namespace QLCF.Model
             using (SqlConnection cn = new SqlConnection(connectionString))
             {
                 cn.Open();
-                string query = "SELECT * FROM Branch WHERE id = " + id;
+                string query = "SELECT * FROM Drink WHERE id = " + id;
 
                 SqlCommand cmd = new SqlCommand(query, cn);
                 using (SqlDataReader dataReader = cmd.ExecuteReader())
@@ -82,7 +82,7 @@ namespace QLCF.Model
             using (SqlConnection cn = new SqlConnection(connectionString))
             {
                 cn.Open();
-                string query = "INSERT INTO [dbo].[Drink] VALUES (" + this.drinkName + "," + this.price + "," + this.state + ")";
+                string query = "INSERT INTO [dbo].[Drink] VALUES (N'" + this.drinkName + "'," + this.price + ",N'" + this.state + "')";
 
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cmd.ExecuteNonQuery();
@@ -95,7 +95,7 @@ namespace QLCF.Model
             using (SqlConnection cn = new SqlConnection(connectionString))
             {
                 cn.Open();
-                string query = "UPDATE [dbo].[Drink] SET [food] = " + this.drinkName + ",[price] = " + this.price + ",[state] = " + this.state + "WHERE id = " + this.id;
+                string query = "UPDATE [dbo].[Drink] SET [drink] = N'" + this.drinkName + "',[price] = " + this.price + ",[state] = N'" + this.state + "' WHERE id = " + this.id;
 
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cmd.ExecuteNonQuery();

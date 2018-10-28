@@ -18,10 +18,10 @@ namespace QLCF
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login());
             Application.Run(new FormDrink());
-            Application.Run(new FormFood());
-            Application.Run(new FormBranch());
-            Application.Run(new FormEmployee());
-            Application.Run(new FormMain());
+            //Application.Run(new FormFood());
+            //Application.Run(new FormBranch());
+            //Application.Run(new FormEmployee());
+            //Application.Run(new FormMain());
         }
     }
 }
