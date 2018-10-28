@@ -67,6 +67,7 @@
             this.data_branch.RowTemplate.Height = 28;
             this.data_branch.Size = new System.Drawing.Size(800, 177);
             this.data_branch.TabIndex = 1;
+            this.data_branch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_branch_CellClick);
             // 
             // label2
             // 
