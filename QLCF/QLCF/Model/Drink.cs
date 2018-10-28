@@ -76,5 +76,43 @@ namespace QLCF.Model
                 cn.Close();
             }
         }
+        public void Insert()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["cStr"].ConnectionString;
+            using (SqlConnection cn = new SqlConnection(connectionString))
+            {
+                cn.Open();
+                string query = "INSERT INTO [dbo].[Drink] VALUES (" + this.drinkName + "," + this.price + "," + this.state + ")";
+
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void Update()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["cStr"].ConnectionString;
+            using (SqlConnection cn = new SqlConnection(connectionString))
+            {
+                cn.Open();
+                string query = "UPDATE [dbo].[Drink] SET [food] = " + this.drinkName + ",[price] = " + this.price + ",[state] = " + this.state + "WHERE id = " + this.id;
+
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void Delete()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["cStr"].ConnectionString;
+            using (SqlConnection cn = new SqlConnection(connectionString))
+            {
+                cn.Open();
+                string query = "DELETE FROM [dbo].[Drink] WHERE id = " + this.id;
+
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

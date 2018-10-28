@@ -126,35 +126,36 @@ namespace QLCF.Model
             }
         }
 
-        //public int InsertEmployee()
-        //{
-        //    string connectionString = ConfigurationManager.ConnectionStrings["cStr"].ConnectionString;
-        //    using (SqlConnection cn = new SqlConnection())
-        //    {
-        //        cn.Open();
-        //        string query = "INSERT INTO Employee() VALUES(@firstName,@lastName,@dob,@[address],@homeTown,@position,@phoneNumber,@idCardNumber,@email,@[password],@startDay,@endDay,@active,@salary,@bonus,@branchWork)";
+        public void InsertEmployee()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["cStr"].ConnectionString;
+            using (SqlConnection cn = new SqlConnection())
+            {
+                cn.Open();
+                string query = "INSERT INTO [dbo].[Employee] VALUES(@firstName,@lastName,@dob,@[address],@homeTown,@position,@phoneNumber,@idCardNumber,@email,@[password],@startDay,@endDay,@active,@salary,@bonus,@branchWork)";
 
-        //        SqlCommand cmd = new SqlCommand(query, cn);
-        //        cmd.Parameters.AddWithValue("@firstName",this.firstname);
-        //        cmd.Parameters.AddWithValue("@lastName", this.lastname);
-        //        cmd.Parameters.AddWithValue("@dob", this.dayofbirth);
-        //        cmd.Parameters.AddWithValue("@[address]", this.address);
-        //        cmd.Parameters.AddWithValue("@homeTown", this.hometown);
-        //        cmd.Parameters.AddWithValue("@position", this.position);
-        //        cmd.Parameters.AddWithValue("@phoneNumber", this.phonenumber);
-        //        cmd.Parameters.AddWithValue("@idCardNumber", this.idcardnumber);
-        //        cmd.Parameters.AddWithValue("@email", this.email);
-        //        cmd.Parameters.AddWithValue("@[password]", this.password);
-        //        cmd.Parameters.AddWithValue("@startDay", this.startdate);
-        //        cmd.Parameters.AddWithValue("@endDay", this.enddate);
-        //        cmd.Parameters.AddWithValue("@active", this.active);
-        //        cmd.Parameters.AddWithValue("@salary", this.salary);
-        //        cmd.Parameters.AddWithValue("@bonus", this.bonus);
-        //        cmd.Parameters.AddWithValue("@branchWork", this.branchWork);
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.Parameters.AddWithValue("@firstName", this.firstname);
+                cmd.Parameters.AddWithValue("@lastName", this.lastname);
+                cmd.Parameters.AddWithValue("@dob", this.dayofbirth);
+                cmd.Parameters.AddWithValue("@[address]", this.address);
+                cmd.Parameters.AddWithValue("@homeTown", this.hometown);
+                cmd.Parameters.AddWithValue("@position", this.position);
+                cmd.Parameters.AddWithValue("@phoneNumber", this.phonenumber);
+                cmd.Parameters.AddWithValue("@idCardNumber", this.idcardnumber);
+                cmd.Parameters.AddWithValue("@email", this.email);
+                cmd.Parameters.AddWithValue("@[password]", this.password);
+                cmd.Parameters.AddWithValue("@startDay", this.startdate);
+                cmd.Parameters.AddWithValue("@endDay", this.enddate);
+                cmd.Parameters.AddWithValue("@active", this.active);
+                cmd.Parameters.AddWithValue("@salary", this.salary);
+                cmd.Parameters.AddWithValue("@bonus", this.bonus);
+                cmd.Parameters.AddWithValue("@branchWork", this.branchWork);
 
-        //        cmd.ExecuteNonQuery();
-        //    }
-        //    return 0;
-        //}
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
     }
 }
