@@ -126,13 +126,48 @@ namespace QLCF.Model
             }
         }
 
+        public void SelectObjectwithEmail(string email)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["cStr"].ConnectionString;
+            using (SqlConnection cn = new SqlConnection(connectionString))
+            {
+                cn.Open();
+                string query = "SELECT * FROM Employee WHERE email = " + email;
+
+                SqlCommand cmd = new SqlCommand(query, cn);
+                using (SqlDataReader dataReader = cmd.ExecuteReader())
+                {
+                    while (dataReader.Read())
+                    {
+                        this.id = Convert.ToInt32(dataReader["id"]);
+                        this.firstname = dataReader["firstName"].ToString();
+                        this.lastname = dataReader["lastName"].ToString();
+                        this.dayofbirth = Convert.ToDateTime(dataReader["dob"]);
+                        this.address = dataReader["address"].ToString();
+                        this.hometown = dataReader["homeTown"].ToString();
+                        this.position = dataReader["position"].ToString();
+                        this.phonenumber = dataReader["phoneNumber"].ToString();
+                        this.idcardnumber = dataReader["idCardNumber"].ToString();
+                        this.email = dataReader["email"].ToString();
+                        this.password = dataReader["password"].ToString();
+                        this.startdate = Convert.ToDateTime(dataReader["startDay"]);
+                        this.enddate = Convert.ToDateTime(dataReader["endDay"]);
+                        this.salary = Convert.ToDouble(dataReader["salary"]);
+                        this.bonus = Convert.ToDouble(dataReader["bonus"]);
+                        this.branchWork = dataReader["branchWork"].ToString();
+                    }
+                }
+                cn.Close();
+            }
+        }
+
         public void InsertEmployee()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["cStr"].ConnectionString;
-            using (SqlConnection cn = new SqlConnection())
+            using (SqlConnection cn = new SqlConnection(connectionString))
             {
                 cn.Open();
-                string query = "INSERT INTO [dbo].[Employee] VALUES(@firstName,@lastName,@dob,@[address],@homeTown,@position,@phoneNumber,@idCardNumber,@email,@[password],@startDay,@endDay,@active,@salary,@bonus,@branchWork)";
+                string query = "INSERT INTO [dbo].[Employee] VALUES(N@firstName,N@lastName,@dob,N@[address],N@homeTown,N@position,@phoneNumber,@idCardNumber,@email,@[password],@startDay,@endDay,@active,@salary,@bonus,N@branchWork)";
 
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cmd.Parameters.AddWithValue("@firstName", this.firstname);
@@ -156,6 +191,50 @@ namespace QLCF.Model
             }
         }
 
+        public void Update()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["cStr"].ConnectionString;
+            using (SqlConnection cn = new SqlConnection(connectionString))
+            {
+                cn.Open();
+                string query = "UPDATE [dbo].[Employee] SET [firstName] = N'" + this.firstname 
+                    + "',[lastName] = N'" + this.lastname 
+                    + "',[dob] = " + this.dayofbirth
+                    + ",[address] = N'" + this.address
+                    + "',homeTown = N'" + this.hometown
+                    + "',position = N'" + this.position
+                    + "',phoneNumber = " + this.phonenumber
+                    + ",idCardNumber = " + this.idcardnumber
+                    + ",startDay = " + this.startdate
+                    + ",endDay = " + this.enddate
+                    + ",active = " + this.active
+                    + ",salary = " + this.salary
+                    + ",bonus = " + this.bonus
+                    + ",branchWork = N'" + this.branchWork
+                    + "' WHERE id = " + this.id;
 
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public static bool Login(string username, string password)
+        {
+            Employee emp = null;
+            try
+            {
+                emp = new Employee();
+                emp.SelectObjectwithEmail(username);
+            }
+            catch 
+            {
+                return false;
+            }
+            if (emp != null && emp.password == username)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
