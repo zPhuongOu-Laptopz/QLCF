@@ -64,6 +64,7 @@
             this.data_Drink.RowTemplate.Height = 28;
             this.data_Drink.Size = new System.Drawing.Size(605, 150);
             this.data_Drink.TabIndex = 1;
+            this.data_Drink.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Drink_CellClick);
             // 
             // btn_deleteDrink
             // 
@@ -95,6 +96,7 @@
             // 
             // cbb_drinkState
             // 
+            this.cbb_drinkState.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbb_drinkState.FormattingEnabled = true;
             this.cbb_drinkState.Items.AddRange(new object[] {
             "Đang bán",
@@ -179,6 +181,7 @@
             this.MaximizeBox = false;
             this.Name = "FormDrink";
             this.Text = "FormDrink";
+            this.Load += new System.EventHandler(this.FormDrink_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_Drink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_price)).EndInit();
             this.ResumeLayout(false);
