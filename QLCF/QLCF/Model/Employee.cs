@@ -55,7 +55,7 @@ namespace QLCF.Model
         {
             List<Employee> list = new List<Employee>();
             string connectionString = ConfigurationManager.ConnectionStrings["cStr"].ConnectionString;
-            using (SqlConnection cn = new SqlConnection())
+            using (SqlConnection cn = new SqlConnection(connectionString))
             {
                 cn.Open();
                 string query = "SELECT * FROM Employee";

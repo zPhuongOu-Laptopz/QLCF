@@ -133,6 +133,7 @@
             this.btn_addBranch.TabIndex = 4;
             this.btn_addBranch.Text = "Thêm chi nhánh";
             this.btn_addBranch.UseVisualStyleBackColor = true;
+            this.btn_addBranch.Click += new System.EventHandler(this.btn_addBranch_Click);
             // 
             // btn_editBranch
             // 

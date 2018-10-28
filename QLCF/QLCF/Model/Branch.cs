@@ -32,7 +32,7 @@ namespace QLCF.Model
         {
             List<Branch> list = new List<Branch>();
             string connectionString = ConfigurationManager.ConnectionStrings["cStr"].ConnectionString;
-            using (SqlConnection cn = new SqlConnection())
+            using (SqlConnection cn = new SqlConnection(connectionString))
             {
                 cn.Open();
                 string query = "SELECT * FROM Branch";

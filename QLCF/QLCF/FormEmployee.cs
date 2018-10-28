@@ -23,9 +23,54 @@ namespace QLCF
 
         }
 
+        private int ValidationModel(string firstname, string lastname, string password, string position, DateTime daystart)
+        {
+            if (firstname == null || firstname == "" || firstname == firstname.Trim())
+            {
+                return -1;
+            }
+            else if (lastname == null || lastname == "" || lastname == lastname.Trim())
+            {
+                return -2;
+            }
+            else if (password == null || password == "" || password == password.Trim() || password.Length < 6)
+            {
+                return -3;
+            }
+            else if (position == null || position =="" || position == position.Trim())
+            {
+
+            }
+            return 0;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
+            if (txt_firstName.Text == null || txt_firstName.Text != "abcd")
+            {
+                MessageBox.Show("Vui lòng nhập tên của bạn!");
+            }
+            else if (txt_password.Text == null)
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu của bạn!");
+            }
+            else if (txt_lastName.Text == null)
+            {
+                MessageBox.Show("Vui lòng nhập họ của bạn!");
+            }
+            else if (cbb_position.Text == null)
+            {
+                MessageBox.Show("Vui lòng chọn chức vụ của bạn!");
+            }
+            else if (dtp_daystart.Value == null)
+            {
+                MessageBox.Show("Vui lòng chọn ngày bắt đầu công việc của bạn!");
+            }
+            else
+            {
+
+            }
         }
 
         private void FormEmployee_Load(object sender, EventArgs e)
@@ -67,6 +112,11 @@ namespace QLCF
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
         {
 
         }
