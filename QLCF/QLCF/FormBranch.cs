@@ -48,5 +48,51 @@ namespace QLCF
             num_empExpect.Value = branch.eNumberExpect;
 
         }
+
+        private int Validation(string bName, string bAddress, decimal bEmp, decimal bEmpExpect)
+        {
+            if (bName == null || bName == "" || bName == bName.Trim())
+            {
+                return -1;
+            }
+            else if (bAddress == null || bAddress == "" || bAddress == bAddress.Trim())
+            {
+                return -2;
+            }
+            else if (bEmp == 0)
+            {
+                return -3;
+            }
+            else if (bEmpExpect == 0)
+            {
+                return -4;
+            }
+            return 0;
+        }
+
+        private void btn_addBranch_Click(object sender, EventArgs e)
+        {
+            int check = Validation(txt_branchName.Text, txt_addressBranch.Text, num_emp.Value, num_empExpect.Value);
+            if (check == -1)
+            {
+                MessageBox.Show("Vui lòng nhập tên chi nhánh!");
+            }
+            else if (check == -2)
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ chi nhánh!");
+            }
+            else if (check == -3)
+            {
+                MessageBox.Show("Vui lòng nhập số nhân viên hiện tại!");
+            }
+            else if (check == -4)
+            {
+                MessageBox.Show("Vui lòng nhập số nhân viên dự kiến!");
+            }
+            else
+            {
+
+            }
+        }
     }
 }

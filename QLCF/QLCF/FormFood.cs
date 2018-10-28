@@ -35,5 +35,51 @@ namespace QLCF
             num_price.Value = Convert.ToDecimal(food.price);
             cbb_foodState.Text = food.state.ToString();
         }
+
+        private int Validation(string fName, decimal price)
+        {
+            if (fName == null || fName == "" || fName == fName.Trim())
+            {
+                return -1;
+            }
+            else if (price == 0)
+            {
+                return -2;
+            }
+            return 0;
+        }
+
+        private void btn_addFood_Click(object sender, EventArgs e)
+        {
+            int check = Validation(txt_foodName.Text, num_price.Value);
+            if (check == -1)
+            {
+                MessageBox.Show("Vui lòng nhập tên món ăn!");
+            }
+            else if (check == -2)
+            {
+                MessageBox.Show("Vui lòng nhập giá tiền!");
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btn_editFood_Click(object sender, EventArgs e)
+        {
+            if (Validation(txt_foodName.Text, num_price.Value) == -1)
+            {
+                MessageBox.Show("Vui lòng nhập tên món ăn!");
+            }
+            else if (Validation(txt_foodName.Text, num_price.Value) == -2)
+            {
+                MessageBox.Show("Vui lòng nhập giá tiền!");
+            }
+            else
+            {
+
+            }
+        }
     }
 }

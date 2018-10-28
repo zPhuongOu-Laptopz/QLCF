@@ -140,6 +140,7 @@
             this.btn_editFood.TabIndex = 7;
             this.btn_editFood.Text = "Sửa thông tin";
             this.btn_editFood.UseVisualStyleBackColor = true;
+            this.btn_editFood.Click += new System.EventHandler(this.btn_editFood_Click);
             // 
             // btn_addFood
             // 
@@ -149,6 +150,7 @@
             this.btn_addFood.TabIndex = 8;
             this.btn_addFood.Text = "Thêm món ăn";
             this.btn_addFood.UseVisualStyleBackColor = true;
+            this.btn_addFood.Click += new System.EventHandler(this.btn_addFood_Click);
             // 
             // btn_back
             // 

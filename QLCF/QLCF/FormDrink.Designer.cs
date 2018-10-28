@@ -84,6 +84,7 @@
             this.btn_editDrink.TabIndex = 16;
             this.btn_editDrink.Text = "Sửa thông tin";
             this.btn_editDrink.UseVisualStyleBackColor = true;
+            this.btn_editDrink.Click += new System.EventHandler(this.btn_editDrink_Click);
             // 
             // btn_addDrink
             // 
@@ -93,6 +94,7 @@
             this.btn_addDrink.TabIndex = 17;
             this.btn_addDrink.Text = "Thêm nước uống\r\n";
             this.btn_addDrink.UseVisualStyleBackColor = true;
+            this.btn_addDrink.Click += new System.EventHandler(this.btn_addDrink_Click);
             // 
             // cbb_drinkState
             // 
