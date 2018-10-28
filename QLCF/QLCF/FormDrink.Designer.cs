@@ -40,6 +40,10 @@
             this.txt_drinkName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data_Drink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_price)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +54,7 @@
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(605, 49);
+            this.label1.Size = new System.Drawing.Size(780, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý nước uống";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -58,27 +62,33 @@
             // data_Drink
             // 
             this.data_Drink.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_Drink.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.dName,
+            this.price,
+            this.state});
             this.data_Drink.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.data_Drink.Location = new System.Drawing.Point(0, 300);
+            this.data_Drink.Location = new System.Drawing.Point(0, 321);
             this.data_Drink.Name = "data_Drink";
+            this.data_Drink.ReadOnly = true;
             this.data_Drink.RowTemplate.Height = 28;
-            this.data_Drink.Size = new System.Drawing.Size(605, 150);
+            this.data_Drink.Size = new System.Drawing.Size(780, 236);
             this.data_Drink.TabIndex = 1;
             this.data_Drink.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Drink_CellClick);
             // 
             // btn_deleteDrink
             // 
-            this.btn_deleteDrink.Enabled = false;
-            this.btn_deleteDrink.Location = new System.Drawing.Point(349, 222);
+            this.btn_deleteDrink.Location = new System.Drawing.Point(549, 222);
             this.btn_deleteDrink.Name = "btn_deleteDrink";
             this.btn_deleteDrink.Size = new System.Drawing.Size(147, 41);
             this.btn_deleteDrink.TabIndex = 15;
             this.btn_deleteDrink.Text = "Xóa nước uống";
             this.btn_deleteDrink.UseVisualStyleBackColor = true;
+            this.btn_deleteDrink.Click += new System.EventHandler(this.btn_deleteDrink_Click);
             // 
             // btn_editDrink
             // 
-            this.btn_editDrink.Location = new System.Drawing.Point(349, 153);
+            this.btn_editDrink.Location = new System.Drawing.Point(549, 153);
             this.btn_editDrink.Name = "btn_editDrink";
             this.btn_editDrink.Size = new System.Drawing.Size(147, 41);
             this.btn_editDrink.TabIndex = 16;
@@ -88,7 +98,7 @@
             // 
             // btn_addDrink
             // 
-            this.btn_addDrink.Location = new System.Drawing.Point(349, 85);
+            this.btn_addDrink.Location = new System.Drawing.Point(549, 85);
             this.btn_addDrink.Name = "btn_addDrink";
             this.btn_addDrink.Size = new System.Drawing.Size(147, 41);
             this.btn_addDrink.TabIndex = 17;
@@ -112,6 +122,11 @@
             // num_price
             // 
             this.num_price.Location = new System.Drawing.Point(37, 151);
+            this.num_price.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
             this.num_price.Name = "num_price";
             this.num_price.Size = new System.Drawing.Size(215, 26);
             this.num_price.TabIndex = 13;
@@ -156,18 +171,46 @@
             // btn_back
             // 
             this.btn_back.BackColor = System.Drawing.Color.DarkGray;
-            this.btn_back.Location = new System.Drawing.Point(479, 11);
+            this.btn_back.Location = new System.Drawing.Point(609, 11);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(126, 38);
             this.btn_back.TabIndex = 18;
             this.btn_back.Text = "Quay lại";
             this.btn_back.UseVisualStyleBackColor = false;
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "Mã";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // dName
+            // 
+            this.dName.DataPropertyName = "drinkName";
+            this.dName.HeaderText = "Tên";
+            this.dName.Name = "dName";
+            this.dName.ReadOnly = true;
+            // 
+            // price
+            // 
+            this.price.DataPropertyName = "price";
+            this.price.HeaderText = "Giá";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
+            // state
+            // 
+            this.state.DataPropertyName = "state";
+            this.state.HeaderText = "Trạng thái";
+            this.state.Name = "state";
+            this.state.ReadOnly = true;
+            // 
             // FormDrink
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 450);
+            this.ClientSize = new System.Drawing.Size(780, 557);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_deleteDrink);
             this.Controls.Add(this.btn_editDrink);
@@ -205,5 +248,9 @@
         private System.Windows.Forms.TextBox txt_drinkName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn state;
     }
 }
