@@ -59,10 +59,11 @@
             // 
             this.data_Food.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_Food.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.data_Food.Location = new System.Drawing.Point(0, 300);
+            this.data_Food.Location = new System.Drawing.Point(0, 311);
             this.data_Food.Name = "data_Food";
+            this.data_Food.ReadOnly = true;
             this.data_Food.RowTemplate.Height = 28;
-            this.data_Food.Size = new System.Drawing.Size(655, 150);
+            this.data_Food.Size = new System.Drawing.Size(655, 221);
             this.data_Food.TabIndex = 1;
             this.data_Food.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Food_CellClick);
             // 
@@ -106,6 +107,11 @@
             // num_price
             // 
             this.num_price.Location = new System.Drawing.Point(54, 156);
+            this.num_price.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
             this.num_price.Name = "num_price";
             this.num_price.Size = new System.Drawing.Size(215, 26);
             this.num_price.TabIndex = 4;
@@ -166,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 450);
+            this.ClientSize = new System.Drawing.Size(655, 532);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_deleteFood);
             this.Controls.Add(this.btn_editFood);

@@ -13,12 +13,18 @@ namespace QLCF
 {
     public partial class FormFood : Form
     {
+        int Oid;
         public FormFood()
         {
             InitializeComponent();
         }
 
         private void FormFood_Load(object sender, EventArgs e)
+        {
+            reLoad();
+        }
+
+        private void reLoad()
         {
             List<Food> list = new List<Food>();
             list = Food.SelectallObject();
@@ -29,16 +35,17 @@ namespace QLCF
         private void data_Food_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = data_Food.CurrentCell.RowIndex;
-            int id = Convert.ToInt32(data_Food.Rows[index].Cells["id"].Value);
+            Oid = Convert.ToInt32(data_Food.Rows[index].Cells["id"].Value);
             Food food = new Food();
-            txt_foodName.Text = food.foodName.ToString();
+            food.SelectObjectwithID(Oid);
+            txt_foodName.Text = food.foodName;
             num_price.Value = Convert.ToDecimal(food.price);
-            cbb_foodState.Text = food.state.ToString();
+            cbb_foodState.Text = food.state;
         }
 
-        private int Validation(string fName, decimal price)
+        private int Validation(string fName, double price)
         {
-            if (fName == null || fName == "" || fName == fName.Trim())
+            if (fName == null || fName == "")
             {
                 return -1;
             }
@@ -51,7 +58,7 @@ namespace QLCF
 
         private void btn_addFood_Click(object sender, EventArgs e)
         {
-            int check = Validation(txt_foodName.Text, num_price.Value);
+            int check = Validation(txt_foodName.Text, Convert.ToDouble(num_price.Value));
             if (check == -1)
             {
                 MessageBox.Show("Vui lòng nhập tên món ăn!");
@@ -62,23 +69,44 @@ namespace QLCF
             }
             else
             {
+                Food food = new Food(txt_foodName.Text, Convert.ToDouble(num_price.Value), cbb_foodState.Text);
+                try
+                {
+                    food.Insert();
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tên món ăn không được trùng!");
+                }
+                finally
+                {
+                    reLoad();
+                }
             }
         }
 
         private void btn_editFood_Click(object sender, EventArgs e)
         {
-            if (Validation(txt_foodName.Text, num_price.Value) == -1)
+            int check = Validation(txt_foodName.Text, Convert.ToDouble(num_price.Value));
+
+            if (check == -1)
             {
                 MessageBox.Show("Vui lòng nhập tên món ăn!");
             }
-            else if (Validation(txt_foodName.Text, num_price.Value) == -2)
+            else if (check == -2)
             {
                 MessageBox.Show("Vui lòng nhập giá tiền!");
             }
             else
             {
-
+                Food food = new Food();
+                food.SelectObjectwithID(Oid);
+                food.foodName = txt_foodName.Text;
+                food.price = Convert.ToDouble(num_price.Value);
+                food.state = cbb_foodState.Text;
+                food.Update();
+                reLoad();
             }
         }
     }
