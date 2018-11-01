@@ -236,5 +236,40 @@ namespace QLCF.Model
             }
             return false;
         }
+
+        public void Search_Employee(string key, string value)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["cStr"].ConnectionString;
+            using (SqlConnection cn = new SqlConnection(connectionString))
+            {
+                cn.Open();
+                string query = "SELECT * FROM Employee WHERE " + key + " LIKE '%" + value + "%'";
+
+                SqlCommand cmd = new SqlCommand(query, cn);
+                using (SqlDataReader dataReader = cmd.ExecuteReader())
+                {
+                    while (dataReader.Read())
+                    {
+                        this.id = Convert.ToInt32(dataReader["id"]);
+                        this.firstname = dataReader["firstName"].ToString();
+                        this.lastname = dataReader["lastName"].ToString();
+                        this.dayofbirth = Convert.ToDateTime(dataReader["dob"]);
+                        this.address = dataReader["address"].ToString();
+                        this.hometown = dataReader["homeTown"].ToString();
+                        this.position = dataReader["position"].ToString();
+                        this.phonenumber = dataReader["phoneNumber"].ToString();
+                        this.idcardnumber = dataReader["idCardNumber"].ToString();
+                        this.email = dataReader["email"].ToString();
+                        this.password = dataReader["password"].ToString();
+                        this.startdate = Convert.ToDateTime(dataReader["startDay"]);
+                        this.enddate = Convert.ToDateTime(dataReader["endDay"]);
+                        this.salary = Convert.ToDouble(dataReader["salary"]);
+                        this.bonus = Convert.ToDouble(dataReader["bonus"]);
+                        this.branchWork = dataReader["branchWork"].ToString();
+                    }
+                }
+                cn.Close();
+            }
+        }
     }
 }
