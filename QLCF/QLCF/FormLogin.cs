@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLCF.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,20 @@ namespace QLCF
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            
+            bool check = Employee.Login(txt_Email.Text, txt_password.Text);
+            if (check == true)
+            {
+                MessageBox.Show("Đăng nhập thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Đăng nhập thất bại!");
+            }
         }
     }
 }

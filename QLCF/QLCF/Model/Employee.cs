@@ -132,7 +132,7 @@ namespace QLCF.Model
             using (SqlConnection cn = new SqlConnection(connectionString))
             {
                 cn.Open();
-                string query = "SELECT * FROM Employee WHERE email = " + email;
+                string query = "SELECT * FROM Employee WHERE email = N'" + email + "'";
 
                 SqlCommand cmd = new SqlCommand(query, cn);
                 using (SqlDataReader dataReader = cmd.ExecuteReader())
@@ -230,7 +230,7 @@ namespace QLCF.Model
             {
                 return false;
             }
-            if (emp != null && emp.password == username)
+            if (emp != null && emp.password == password)
             {
                 return true;
             }

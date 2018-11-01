@@ -32,10 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_ = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
             this.btn_Login = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_quit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,12 +72,12 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Password:";
             // 
-            // txt_
+            // txt_Email
             // 
-            this.txt_.Location = new System.Drawing.Point(130, 202);
-            this.txt_.Name = "txt_";
-            this.txt_.Size = new System.Drawing.Size(435, 26);
-            this.txt_.TabIndex = 1;
+            this.txt_Email.Location = new System.Drawing.Point(130, 202);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(435, 26);
+            this.txt_Email.TabIndex = 1;
             // 
             // btn_Login
             // 
@@ -87,6 +87,7 @@
             this.btn_Login.TabIndex = 3;
             this.btn_Login.Text = "Đăng Nhập";
             this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // label4
             // 
@@ -98,13 +99,13 @@
             this.label4.Text = "to continue to Coffee Management";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // txt_password
             // 
-            this.textBox1.Location = new System.Drawing.Point(130, 280);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(435, 26);
-            this.textBox1.TabIndex = 2;
+            this.txt_password.Location = new System.Drawing.Point(130, 280);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
+            this.txt_password.Size = new System.Drawing.Size(435, 26);
+            this.txt_password.TabIndex = 2;
             // 
             // btn_quit
             // 
@@ -136,8 +137,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_quit);
             this.Controls.Add(this.btn_Login);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txt_);
+            this.Controls.Add(this.txt_password);
+            this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -155,10 +156,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_;
+        private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Button btn_quit;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
