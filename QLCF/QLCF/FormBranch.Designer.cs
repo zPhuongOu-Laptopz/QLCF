@@ -58,43 +58,48 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(101, 61);
+            this.label2.Location = new System.Drawing.Point(67, 40);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 24);
+            this.label2.Size = new System.Drawing.Size(88, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên chi nhánh:";
             // 
             // txt_branchName
             // 
-            this.txt_branchName.Location = new System.Drawing.Point(250, 61);
+            this.txt_branchName.Location = new System.Drawing.Point(167, 40);
+            this.txt_branchName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_branchName.Name = "txt_branchName";
-            this.txt_branchName.Size = new System.Drawing.Size(262, 26);
+            this.txt_branchName.Size = new System.Drawing.Size(176, 20);
             this.txt_branchName.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(159, 108);
+            this.label3.Location = new System.Drawing.Point(106, 70);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 24);
+            this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Địa chỉ:";
             // 
             // txt_addressBranch
             // 
-            this.txt_addressBranch.Location = new System.Drawing.Point(250, 108);
+            this.txt_addressBranch.Location = new System.Drawing.Point(167, 70);
+            this.txt_addressBranch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_addressBranch.Name = "txt_addressBranch";
-            this.txt_addressBranch.Size = new System.Drawing.Size(262, 26);
+            this.txt_addressBranch.Size = new System.Drawing.Size(176, 20);
             this.txt_addressBranch.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 208);
+            this.label4.Location = new System.Drawing.Point(33, 135);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(178, 24);
+            this.label4.Size = new System.Drawing.Size(132, 17);
             this.label4.TabIndex = 2;
             this.label4.Text = "Số nhân viên hiện tại:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -103,9 +108,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(49, 159);
+            this.label5.Location = new System.Drawing.Point(33, 103);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(178, 24);
+            this.label5.Size = new System.Drawing.Size(131, 17);
             this.label5.TabIndex = 2;
             this.label5.Text = "Số nhân viên dự kiến:";
             this.label5.Click += new System.EventHandler(this.label4_Click);
@@ -114,9 +120,10 @@
             // 
             this.btn_addBranch.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_addBranch.ForeColor = System.Drawing.Color.White;
-            this.btn_addBranch.Location = new System.Drawing.Point(169, 9);
+            this.btn_addBranch.Location = new System.Drawing.Point(113, 6);
+            this.btn_addBranch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_addBranch.Name = "btn_addBranch";
-            this.btn_addBranch.Size = new System.Drawing.Size(155, 41);
+            this.btn_addBranch.Size = new System.Drawing.Size(103, 27);
             this.btn_addBranch.TabIndex = 4;
             this.btn_addBranch.Text = "THÊM CHI NHÁNH";
             this.btn_addBranch.UseVisualStyleBackColor = false;
@@ -126,9 +133,10 @@
             // 
             this.btn_editBranch.BackColor = System.Drawing.Color.LightSlateGray;
             this.btn_editBranch.ForeColor = System.Drawing.Color.White;
-            this.btn_editBranch.Location = new System.Drawing.Point(330, 9);
+            this.btn_editBranch.Location = new System.Drawing.Point(220, 6);
+            this.btn_editBranch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_editBranch.Name = "btn_editBranch";
-            this.btn_editBranch.Size = new System.Drawing.Size(155, 41);
+            this.btn_editBranch.Size = new System.Drawing.Size(103, 27);
             this.btn_editBranch.TabIndex = 4;
             this.btn_editBranch.Text = "SỬA THÔNG TIN";
             this.btn_editBranch.UseVisualStyleBackColor = false;
@@ -138,44 +146,50 @@
             // 
             this.btn_deleteBranch.BackColor = System.Drawing.Color.DarkMagenta;
             this.btn_deleteBranch.ForeColor = System.Drawing.Color.White;
-            this.btn_deleteBranch.Location = new System.Drawing.Point(491, 9);
+            this.btn_deleteBranch.Location = new System.Drawing.Point(327, 6);
+            this.btn_deleteBranch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_deleteBranch.Name = "btn_deleteBranch";
-            this.btn_deleteBranch.Size = new System.Drawing.Size(155, 41);
+            this.btn_deleteBranch.Size = new System.Drawing.Size(103, 27);
             this.btn_deleteBranch.TabIndex = 4;
             this.btn_deleteBranch.Text = "XÓA CHI NHÁNH";
             this.btn_deleteBranch.UseVisualStyleBackColor = false;
             // 
             // num_empExpect
             // 
-            this.num_empExpect.Location = new System.Drawing.Point(250, 157);
+            this.num_empExpect.Location = new System.Drawing.Point(167, 102);
+            this.num_empExpect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.num_empExpect.Name = "num_empExpect";
-            this.num_empExpect.Size = new System.Drawing.Size(262, 26);
+            this.num_empExpect.Size = new System.Drawing.Size(175, 20);
             this.num_empExpect.TabIndex = 5;
             // 
             // num_emp
             // 
-            this.num_emp.Location = new System.Drawing.Point(250, 206);
+            this.num_emp.Location = new System.Drawing.Point(167, 134);
+            this.num_emp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.num_emp.Name = "num_emp";
-            this.num_emp.Size = new System.Drawing.Size(262, 26);
+            this.num_emp.Size = new System.Drawing.Size(175, 20);
             this.num_emp.TabIndex = 5;
             // 
             // btn_back
             // 
             this.btn_back.BackColor = System.Drawing.Color.DarkGray;
-            this.btn_back.Location = new System.Drawing.Point(37, 12);
+            this.btn_back.Location = new System.Drawing.Point(25, 8);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(126, 38);
+            this.btn_back.Size = new System.Drawing.Size(84, 25);
             this.btn_back.TabIndex = 10;
             this.btn_back.Text = "QUAY LẠI";
             this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(667, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(445, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(404, 655);
+            this.pictureBox1.Size = new System.Drawing.Size(269, 426);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -191,11 +205,12 @@
             this.eNumber,
             this.eNumberExpect});
             this.data_branch.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.data_branch.Location = new System.Drawing.Point(0, 272);
+            this.data_branch.Location = new System.Drawing.Point(0, 177);
+            this.data_branch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data_branch.Name = "data_branch";
             this.data_branch.ReadOnly = true;
             this.data_branch.RowTemplate.Height = 28;
-            this.data_branch.Size = new System.Drawing.Size(667, 383);
+            this.data_branch.Size = new System.Drawing.Size(445, 249);
             this.data_branch.TabIndex = 12;
             // 
             // id
@@ -236,9 +251,9 @@
             // 
             // FormBranch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 655);
+            this.ClientSize = new System.Drawing.Size(714, 426);
             this.Controls.Add(this.data_branch);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_back);
@@ -253,6 +268,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_branchName);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FormBranch";
             this.Text = "QUẢN LÝ CHI NHÁNH";

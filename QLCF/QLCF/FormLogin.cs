@@ -35,11 +35,19 @@ namespace QLCF
             if (check == true)
             {
                 MessageBox.Show("Đăng nhập thành công!");
+                this.Hide();
+                FormMain formMain = new FormMain();
+                formMain.Show();
             }
             else
             {
                 MessageBox.Show("Đăng nhập thất bại!");
             }
+        }
+
+        private void btn_quit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

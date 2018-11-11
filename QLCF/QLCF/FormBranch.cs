@@ -146,5 +146,12 @@ namespace QLCF
                 reLoad();
             }
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMain form = new FormMain();
+            form.Show();
+        }
     }
 }

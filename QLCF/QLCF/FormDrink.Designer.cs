@@ -54,9 +54,10 @@
             // 
             this.btn_deleteDrink.BackColor = System.Drawing.Color.DarkMagenta;
             this.btn_deleteDrink.ForeColor = System.Drawing.Color.White;
-            this.btn_deleteDrink.Location = new System.Drawing.Point(551, 9);
+            this.btn_deleteDrink.Location = new System.Drawing.Point(367, 6);
+            this.btn_deleteDrink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_deleteDrink.Name = "btn_deleteDrink";
-            this.btn_deleteDrink.Size = new System.Drawing.Size(182, 41);
+            this.btn_deleteDrink.Size = new System.Drawing.Size(121, 27);
             this.btn_deleteDrink.TabIndex = 15;
             this.btn_deleteDrink.Text = "XÓA NƯỚC UỐNG";
             this.btn_deleteDrink.UseVisualStyleBackColor = false;
@@ -66,9 +67,10 @@
             // 
             this.btn_editDrink.BackColor = System.Drawing.Color.LightSlateGray;
             this.btn_editDrink.ForeColor = System.Drawing.Color.White;
-            this.btn_editDrink.Location = new System.Drawing.Point(363, 9);
+            this.btn_editDrink.Location = new System.Drawing.Point(242, 6);
+            this.btn_editDrink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_editDrink.Name = "btn_editDrink";
-            this.btn_editDrink.Size = new System.Drawing.Size(182, 41);
+            this.btn_editDrink.Size = new System.Drawing.Size(121, 27);
             this.btn_editDrink.TabIndex = 16;
             this.btn_editDrink.Text = "SỬA THÔNG TIN";
             this.btn_editDrink.UseVisualStyleBackColor = false;
@@ -78,9 +80,10 @@
             // 
             this.btn_addDrink.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_addDrink.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_addDrink.Location = new System.Drawing.Point(175, 9);
+            this.btn_addDrink.Location = new System.Drawing.Point(117, 6);
+            this.btn_addDrink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_addDrink.Name = "btn_addDrink";
-            this.btn_addDrink.Size = new System.Drawing.Size(182, 41);
+            this.btn_addDrink.Size = new System.Drawing.Size(121, 27);
             this.btn_addDrink.TabIndex = 17;
             this.btn_addDrink.Text = "THÊM NƯỚC UỐNG";
             this.btn_addDrink.UseVisualStyleBackColor = false;
@@ -95,30 +98,33 @@
             "Đang bán",
             "Ngừng bán",
             "Sắp ra mắt"});
-            this.cbb_drinkState.Location = new System.Drawing.Point(175, 188);
+            this.cbb_drinkState.Location = new System.Drawing.Point(117, 122);
+            this.cbb_drinkState.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbb_drinkState.Name = "cbb_drinkState";
-            this.cbb_drinkState.Size = new System.Drawing.Size(265, 28);
+            this.cbb_drinkState.Size = new System.Drawing.Size(178, 21);
             this.cbb_drinkState.TabIndex = 14;
             // 
             // num_price
             // 
-            this.num_price.Location = new System.Drawing.Point(178, 134);
+            this.num_price.Location = new System.Drawing.Point(119, 87);
+            this.num_price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.num_price.Maximum = new decimal(new int[] {
             9999999,
             0,
             0,
             0});
             this.num_price.Name = "num_price";
-            this.num_price.Size = new System.Drawing.Size(262, 26);
+            this.num_price.Size = new System.Drawing.Size(175, 20);
             this.num_price.TabIndex = 13;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(64, 188);
+            this.label4.Location = new System.Drawing.Point(43, 122);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 24);
+            this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "Trạng thái:";
             // 
@@ -126,47 +132,53 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(116, 133);
+            this.label3.Location = new System.Drawing.Point(77, 86);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 24);
+            this.label3.Size = new System.Drawing.Size(30, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "Giá:";
             // 
             // txt_drinkName
             // 
-            this.txt_drinkName.Location = new System.Drawing.Point(178, 80);
+            this.txt_drinkName.Location = new System.Drawing.Point(119, 52);
+            this.txt_drinkName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_drinkName.Name = "txt_drinkName";
-            this.txt_drinkName.Size = new System.Drawing.Size(262, 26);
+            this.txt_drinkName.Size = new System.Drawing.Size(176, 20);
             this.txt_drinkName.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 82);
+            this.label2.Location = new System.Drawing.Point(17, 53);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 24);
+            this.label2.Size = new System.Drawing.Size(99, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "Tên nước uống:";
             // 
             // btn_back
             // 
             this.btn_back.BackColor = System.Drawing.Color.DarkGray;
-            this.btn_back.Location = new System.Drawing.Point(43, 12);
+            this.btn_back.Location = new System.Drawing.Point(29, 8);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(126, 38);
+            this.btn_back.Size = new System.Drawing.Size(84, 25);
             this.btn_back.TabIndex = 18;
             this.btn_back.Text = "QUAY LẠI";
             this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(768, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(512, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(545, 676);
+            this.pictureBox1.Size = new System.Drawing.Size(363, 439);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -181,11 +193,12 @@
             this.price,
             this.state});
             this.data_Drink.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.data_Drink.Location = new System.Drawing.Point(0, 261);
+            this.data_Drink.Location = new System.Drawing.Point(0, 169);
+            this.data_Drink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data_Drink.Name = "data_Drink";
             this.data_Drink.ReadOnly = true;
             this.data_Drink.RowTemplate.Height = 28;
-            this.data_Drink.Size = new System.Drawing.Size(768, 415);
+            this.data_Drink.Size = new System.Drawing.Size(512, 270);
             this.data_Drink.TabIndex = 20;
             // 
             // id
@@ -218,10 +231,10 @@
             // 
             // FormDrink
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1313, 676);
+            this.ClientSize = new System.Drawing.Size(875, 439);
             this.Controls.Add(this.data_Drink);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_back);
@@ -234,6 +247,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_drinkName);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FormDrink";
             this.Text = "QUẢN LÝ NƯỚC UỐNG";

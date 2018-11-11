@@ -20,7 +20,7 @@ namespace QLCF
             //Application.Run(new FormDrink());
             //Application.Run(new FormFood());
             //Application.Run(new FormBranch());
-            Application.Run(new FormEmployee());
+            //Application.Run(new FormEmployee());
             //Application.Run(new FormMain());
             //Application.Run(new FormRevenue());
 

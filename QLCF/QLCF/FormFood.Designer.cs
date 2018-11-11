@@ -54,26 +54,29 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 75);
+            this.label2.Location = new System.Drawing.Point(33, 49);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 24);
+            this.label2.Size = new System.Drawing.Size(74, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên món ăn:";
             // 
             // txt_foodName
             // 
-            this.txt_foodName.Location = new System.Drawing.Point(196, 75);
+            this.txt_foodName.Location = new System.Drawing.Point(131, 49);
+            this.txt_foodName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_foodName.Name = "txt_foodName";
-            this.txt_foodName.Size = new System.Drawing.Size(262, 26);
+            this.txt_foodName.Size = new System.Drawing.Size(176, 20);
             this.txt_foodName.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(116, 121);
+            this.label3.Location = new System.Drawing.Point(77, 79);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 24);
+            this.label3.Size = new System.Drawing.Size(30, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Giá:";
             // 
@@ -81,22 +84,24 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(64, 171);
+            this.label4.Location = new System.Drawing.Point(43, 111);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 24);
+            this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 2;
             this.label4.Text = "Trạng thái:";
             // 
             // num_price
             // 
-            this.num_price.Location = new System.Drawing.Point(196, 119);
+            this.num_price.Location = new System.Drawing.Point(131, 77);
+            this.num_price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.num_price.Maximum = new decimal(new int[] {
             9999999,
             0,
             0,
             0});
             this.num_price.Name = "num_price";
-            this.num_price.Size = new System.Drawing.Size(262, 26);
+            this.num_price.Size = new System.Drawing.Size(175, 20);
             this.num_price.TabIndex = 4;
             // 
             // cbb_foodState
@@ -107,9 +112,10 @@
             "Đang bán",
             "Ngừng bán",
             "Sắp ra mắt"});
-            this.cbb_foodState.Location = new System.Drawing.Point(196, 167);
+            this.cbb_foodState.Location = new System.Drawing.Point(131, 109);
+            this.cbb_foodState.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbb_foodState.Name = "cbb_foodState";
-            this.cbb_foodState.Size = new System.Drawing.Size(262, 28);
+            this.cbb_foodState.Size = new System.Drawing.Size(176, 21);
             this.cbb_foodState.TabIndex = 5;
             // 
             // btn_deleteFood
@@ -117,9 +123,10 @@
             this.btn_deleteFood.BackColor = System.Drawing.Color.DarkMagenta;
             this.btn_deleteFood.Enabled = false;
             this.btn_deleteFood.ForeColor = System.Drawing.Color.White;
-            this.btn_deleteFood.Location = new System.Drawing.Point(568, 12);
+            this.btn_deleteFood.Location = new System.Drawing.Point(379, 8);
+            this.btn_deleteFood.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_deleteFood.Name = "btn_deleteFood";
-            this.btn_deleteFood.Size = new System.Drawing.Size(184, 41);
+            this.btn_deleteFood.Size = new System.Drawing.Size(123, 27);
             this.btn_deleteFood.TabIndex = 6;
             this.btn_deleteFood.Text = "XÓA MÓN ĂN";
             this.btn_deleteFood.UseVisualStyleBackColor = false;
@@ -128,9 +135,10 @@
             // 
             this.btn_editFood.BackColor = System.Drawing.Color.LightSlateGray;
             this.btn_editFood.ForeColor = System.Drawing.Color.White;
-            this.btn_editFood.Location = new System.Drawing.Point(378, 12);
+            this.btn_editFood.Location = new System.Drawing.Point(252, 8);
+            this.btn_editFood.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_editFood.Name = "btn_editFood";
-            this.btn_editFood.Size = new System.Drawing.Size(184, 41);
+            this.btn_editFood.Size = new System.Drawing.Size(123, 27);
             this.btn_editFood.TabIndex = 7;
             this.btn_editFood.Text = "SỬA THÔNG TIN";
             this.btn_editFood.UseVisualStyleBackColor = false;
@@ -140,9 +148,10 @@
             // 
             this.btn_addFood.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_addFood.ForeColor = System.Drawing.Color.White;
-            this.btn_addFood.Location = new System.Drawing.Point(188, 11);
+            this.btn_addFood.Location = new System.Drawing.Point(125, 7);
+            this.btn_addFood.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_addFood.Name = "btn_addFood";
-            this.btn_addFood.Size = new System.Drawing.Size(184, 41);
+            this.btn_addFood.Size = new System.Drawing.Size(123, 27);
             this.btn_addFood.TabIndex = 8;
             this.btn_addFood.Text = "THÊM MÓN ĂN";
             this.btn_addFood.UseVisualStyleBackColor = false;
@@ -151,20 +160,23 @@
             // btn_back
             // 
             this.btn_back.BackColor = System.Drawing.Color.DarkGray;
-            this.btn_back.Location = new System.Drawing.Point(56, 12);
+            this.btn_back.Location = new System.Drawing.Point(37, 8);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(126, 38);
+            this.btn_back.Size = new System.Drawing.Size(84, 25);
             this.btn_back.TabIndex = 9;
             this.btn_back.Text = "Quay lại";
             this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(820, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(546, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(493, 676);
+            this.pictureBox1.Size = new System.Drawing.Size(329, 439);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -179,11 +191,12 @@
             this.price,
             this.state});
             this.data_Food.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.data_Food.Location = new System.Drawing.Point(0, 248);
+            this.data_Food.Location = new System.Drawing.Point(0, 161);
+            this.data_Food.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data_Food.Name = "data_Food";
             this.data_Food.ReadOnly = true;
             this.data_Food.RowTemplate.Height = 28;
-            this.data_Food.Size = new System.Drawing.Size(820, 428);
+            this.data_Food.Size = new System.Drawing.Size(546, 278);
             this.data_Food.TabIndex = 11;
             // 
             // id
@@ -216,9 +229,9 @@
             // 
             // FormFood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1313, 676);
+            this.ClientSize = new System.Drawing.Size(875, 439);
             this.Controls.Add(this.data_Food);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_back);
@@ -231,6 +244,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_foodName);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FormFood";
             this.Text = "QUẢN LÝ MÓN ĂN";
