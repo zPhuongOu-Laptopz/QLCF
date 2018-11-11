@@ -28,8 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.data_Emp = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dayofbirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hometown = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phonenumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iccardnumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enddate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.branchWork = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_lastName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,7 +53,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txt_address = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_idCardNumber = new System.Windows.Forms.TextBox();
+            this.txt_search = new System.Windows.Forms.TextBox();
             this.dtp_dob = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -68,32 +83,156 @@
             this.btn_refresh = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_idCard = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.data_Emp)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1149, 46);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Quản Lý Nhân Viên";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // data_Emp
             // 
+            this.data_Emp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data_Emp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_Emp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.lastname,
+            this.firstname,
+            this.dayofbirth,
+            this.address,
+            this.hometown,
+            this.position,
+            this.phonenumber,
+            this.iccardnumber,
+            this.email,
+            this.password,
+            this.startdate,
+            this.enddate,
+            this.salary,
+            this.bonus,
+            this.branchWork});
             this.data_Emp.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.data_Emp.Location = new System.Drawing.Point(0, 830);
             this.data_Emp.Name = "data_Emp";
+            this.data_Emp.ReadOnly = true;
             this.data_Emp.RowTemplate.Height = 28;
-            this.data_Emp.Size = new System.Drawing.Size(1149, 220);
+            this.data_Emp.Size = new System.Drawing.Size(1116, 220);
             this.data_Emp.TabIndex = 2;
             this.data_Emp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Emp_CellClick);
             this.data_Emp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Emp_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "Mã";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // lastname
+            // 
+            this.lastname.DataPropertyName = "lastname";
+            this.lastname.HeaderText = "Họ";
+            this.lastname.Name = "lastname";
+            this.lastname.ReadOnly = true;
+            // 
+            // firstname
+            // 
+            this.firstname.DataPropertyName = "firstname";
+            this.firstname.HeaderText = "Tên";
+            this.firstname.Name = "firstname";
+            this.firstname.ReadOnly = true;
+            // 
+            // dayofbirth
+            // 
+            this.dayofbirth.DataPropertyName = "dayofbirth";
+            this.dayofbirth.HeaderText = "Ngày sinh";
+            this.dayofbirth.Name = "dayofbirth";
+            this.dayofbirth.ReadOnly = true;
+            // 
+            // address
+            // 
+            this.address.DataPropertyName = "address";
+            this.address.HeaderText = "Địa chỉ";
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            // 
+            // hometown
+            // 
+            this.hometown.DataPropertyName = "hometown";
+            this.hometown.HeaderText = "Quê quán";
+            this.hometown.Name = "hometown";
+            this.hometown.ReadOnly = true;
+            // 
+            // position
+            // 
+            this.position.DataPropertyName = "position";
+            this.position.HeaderText = "Chức vụ";
+            this.position.Name = "position";
+            this.position.ReadOnly = true;
+            // 
+            // phonenumber
+            // 
+            this.phonenumber.DataPropertyName = "phonenumber";
+            this.phonenumber.HeaderText = "Số điện thoại";
+            this.phonenumber.Name = "phonenumber";
+            this.phonenumber.ReadOnly = true;
+            // 
+            // iccardnumber
+            // 
+            this.iccardnumber.DataPropertyName = "idcardnumber";
+            this.iccardnumber.HeaderText = "CMND";
+            this.iccardnumber.Name = "iccardnumber";
+            this.iccardnumber.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // password
+            // 
+            this.password.DataPropertyName = "password";
+            this.password.HeaderText = "Mật khẩu";
+            this.password.Name = "password";
+            this.password.ReadOnly = true;
+            this.password.Visible = false;
+            // 
+            // startdate
+            // 
+            this.startdate.DataPropertyName = "startdate";
+            this.startdate.HeaderText = "Ngày vào làm";
+            this.startdate.Name = "startdate";
+            this.startdate.ReadOnly = true;
+            // 
+            // enddate
+            // 
+            this.enddate.DataPropertyName = "enddate";
+            this.enddate.HeaderText = "Ngày nghỉ việc";
+            this.enddate.Name = "enddate";
+            this.enddate.ReadOnly = true;
+            // 
+            // salary
+            // 
+            this.salary.DataPropertyName = "salary";
+            this.salary.HeaderText = "Lương cơ bản";
+            this.salary.Name = "salary";
+            this.salary.ReadOnly = true;
+            // 
+            // bonus
+            // 
+            this.bonus.DataPropertyName = "bonus";
+            this.bonus.HeaderText = "Thưởng";
+            this.bonus.Name = "bonus";
+            this.bonus.ReadOnly = true;
+            // 
+            // branchWork
+            // 
+            this.branchWork.DataPropertyName = "branchWork";
+            this.branchWork.HeaderText = "Chi nhánh";
+            this.branchWork.Name = "branchWork";
+            this.branchWork.ReadOnly = true;
             // 
             // label2
             // 
@@ -110,7 +249,7 @@
             this.txt_lastName.Location = new System.Drawing.Point(26, 86);
             this.txt_lastName.Name = "txt_lastName";
             this.txt_lastName.Size = new System.Drawing.Size(205, 26);
-            this.txt_lastName.TabIndex = 5;
+            this.txt_lastName.TabIndex = 1;
             // 
             // label3
             // 
@@ -127,7 +266,7 @@
             this.txt_firstName.Location = new System.Drawing.Point(26, 153);
             this.txt_firstName.Name = "txt_firstName";
             this.txt_firstName.Size = new System.Drawing.Size(205, 26);
-            this.txt_firstName.TabIndex = 5;
+            this.txt_firstName.TabIndex = 2;
             // 
             // label4
             // 
@@ -154,32 +293,35 @@
             this.txt_address.Location = new System.Drawing.Point(26, 287);
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(205, 26);
-            this.txt_address.TabIndex = 5;
+            this.txt_address.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 329);
+            this.label6.Location = new System.Drawing.Point(22, 395);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(187, 24);
+            this.label6.Size = new System.Drawing.Size(84, 24);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Chứng minh nhân dân:";
+            this.label6.Text = "Tìm kiếm:";
             // 
-            // txt_idCardNumber
+            // txt_search
             // 
-            this.txt_idCardNumber.Location = new System.Drawing.Point(26, 356);
-            this.txt_idCardNumber.Name = "txt_idCardNumber";
-            this.txt_idCardNumber.Size = new System.Drawing.Size(205, 26);
-            this.txt_idCardNumber.TabIndex = 5;
+            this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.Location = new System.Drawing.Point(26, 422);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(326, 26);
+            this.txt_search.TabIndex = 5;
             // 
             // dtp_dob
             // 
             this.dtp_dob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_dob.Location = new System.Drawing.Point(26, 219);
+            this.dtp_dob.MaxDate = new System.DateTime(2100, 1, 1, 0, 0, 0, 0);
+            this.dtp_dob.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.dtp_dob.Name = "dtp_dob";
             this.dtp_dob.Size = new System.Drawing.Size(200, 26);
-            this.dtp_dob.TabIndex = 6;
+            this.dtp_dob.TabIndex = 3;
             // 
             // label7
             // 
@@ -206,10 +348,11 @@
             this.txt_email.Location = new System.Drawing.Point(662, 86);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(205, 26);
-            this.txt_email.TabIndex = 5;
+            this.txt_email.TabIndex = 10;
             // 
             // cbb_homeTown
             // 
+            this.cbb_homeTown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_homeTown.FormattingEnabled = true;
             this.cbb_homeTown.Items.AddRange(new object[] {
             "Thành phố Hà Nội",
@@ -278,7 +421,7 @@
             this.cbb_homeTown.Location = new System.Drawing.Point(340, 84);
             this.cbb_homeTown.Name = "cbb_homeTown";
             this.cbb_homeTown.Size = new System.Drawing.Size(205, 28);
-            this.cbb_homeTown.TabIndex = 7;
+            this.cbb_homeTown.TabIndex = 5;
             // 
             // label9
             // 
@@ -305,7 +448,7 @@
             this.txt_phoneNumber.Location = new System.Drawing.Point(340, 219);
             this.txt_phoneNumber.Name = "txt_phoneNumber";
             this.txt_phoneNumber.Size = new System.Drawing.Size(205, 26);
-            this.txt_phoneNumber.TabIndex = 5;
+            this.txt_phoneNumber.TabIndex = 7;
             // 
             // label11
             // 
@@ -324,7 +467,7 @@
             this.cb_state.Location = new System.Drawing.Point(340, 359);
             this.cb_state.Name = "cb_state";
             this.cb_state.Size = new System.Drawing.Size(142, 23);
-            this.cb_state.TabIndex = 8;
+            this.cb_state.TabIndex = 9;
             this.cb_state.Text = "Đang làm việc";
             this.cb_state.UseVisualStyleBackColor = true;
             // 
@@ -353,17 +496,17 @@
             this.txt_password.Location = new System.Drawing.Point(662, 153);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
-            this.txt_password.ReadOnly = true;
             this.txt_password.Size = new System.Drawing.Size(205, 26);
-            this.txt_password.TabIndex = 5;
+            this.txt_password.TabIndex = 11;
             // 
             // cbb_branch
             // 
+            this.cbb_branch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_branch.FormattingEnabled = true;
             this.cbb_branch.Location = new System.Drawing.Point(340, 285);
             this.cbb_branch.Name = "cbb_branch";
             this.cbb_branch.Size = new System.Drawing.Size(205, 28);
-            this.cbb_branch.TabIndex = 7;
+            this.cbb_branch.TabIndex = 8;
             // 
             // label15
             // 
@@ -379,9 +522,11 @@
             // 
             this.dtp_daystart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_daystart.Location = new System.Drawing.Point(662, 219);
+            this.dtp_daystart.MaxDate = new System.DateTime(2100, 1, 1, 0, 0, 0, 0);
+            this.dtp_daystart.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.dtp_daystart.Name = "dtp_daystart";
             this.dtp_daystart.Size = new System.Drawing.Size(205, 26);
-            this.dtp_daystart.TabIndex = 6;
+            this.dtp_daystart.TabIndex = 12;
             // 
             // label16
             // 
@@ -397,9 +542,11 @@
             // 
             this.dtp_dayend.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_dayend.Location = new System.Drawing.Point(662, 285);
+            this.dtp_dayend.MaxDate = new System.DateTime(2100, 1, 1, 0, 0, 0, 0);
+            this.dtp_dayend.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.dtp_dayend.Name = "dtp_dayend";
             this.dtp_dayend.Size = new System.Drawing.Size(205, 26);
-            this.dtp_dayend.TabIndex = 6;
+            this.dtp_dayend.TabIndex = 13;
             // 
             // label17
             // 
@@ -416,7 +563,7 @@
             this.txt_basicSalary.Location = new System.Drawing.Point(662, 347);
             this.txt_basicSalary.Name = "txt_basicSalary";
             this.txt_basicSalary.Size = new System.Drawing.Size(205, 26);
-            this.txt_basicSalary.TabIndex = 5;
+            this.txt_basicSalary.TabIndex = 14;
             // 
             // label18
             // 
@@ -430,13 +577,15 @@
             // 
             // txt_bonus
             // 
+            this.txt_bonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txt_bonus.Location = new System.Drawing.Point(662, 422);
             this.txt_bonus.Name = "txt_bonus";
             this.txt_bonus.Size = new System.Drawing.Size(205, 26);
-            this.txt_bonus.TabIndex = 5;
+            this.txt_bonus.TabIndex = 15;
             // 
             // cbb_position
             // 
+            this.cbb_position.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_position.FormattingEnabled = true;
             this.cbb_position.Items.AddRange(new object[] {
             "Quản lý",
@@ -444,74 +593,111 @@
             this.cbb_position.Location = new System.Drawing.Point(340, 151);
             this.cbb_position.Name = "cbb_position";
             this.cbb_position.Size = new System.Drawing.Size(205, 28);
-            this.cbb_position.TabIndex = 7;
+            this.cbb_position.TabIndex = 6;
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(920, 86);
+            this.btn_add.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_add.ForeColor = System.Drawing.Color.White;
+            this.btn_add.Location = new System.Drawing.Point(158, 13);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(183, 43);
-            this.btn_add.TabIndex = 9;
-            this.btn_add.Text = "Thêm nhân viên";
-            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.TabIndex = 16;
+            this.btn_add.Text = "THÊM NHÂN VIÊN";
+            this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_edit
             // 
-            this.btn_edit.Location = new System.Drawing.Point(920, 143);
+            this.btn_edit.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btn_edit.ForeColor = System.Drawing.Color.White;
+            this.btn_edit.Location = new System.Drawing.Point(347, 12);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(183, 43);
-            this.btn_edit.TabIndex = 9;
-            this.btn_edit.Text = "Sửa thông tin";
-            this.btn_edit.UseVisualStyleBackColor = true;
-            this.btn_edit.Click += new System.EventHandler(this.button1_Click);
+            this.btn_edit.TabIndex = 17;
+            this.btn_edit.Text = "SỬA THÔNG TIN";
+            this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(920, 202);
+            this.btn_delete.BackColor = System.Drawing.Color.DarkMagenta;
+            this.btn_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_delete.Location = new System.Drawing.Point(536, 12);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(183, 43);
-            this.btn_delete.TabIndex = 9;
-            this.btn_delete.Text = "Xóa nhân viên";
-            this.btn_delete.UseVisualStyleBackColor = true;
-            this.btn_delete.Click += new System.EventHandler(this.button1_Click);
+            this.btn_delete.TabIndex = 18;
+            this.btn_delete.Text = "XÓA NHÂN VIÊN";
+            this.btn_delete.UseVisualStyleBackColor = false;
             // 
             // btn_refresh
             // 
-            this.btn_refresh.Location = new System.Drawing.Point(920, 261);
+            this.btn_refresh.BackColor = System.Drawing.Color.Maroon;
+            this.btn_refresh.ForeColor = System.Drawing.Color.White;
+            this.btn_refresh.Location = new System.Drawing.Point(725, 12);
             this.btn_refresh.Name = "btn_refresh";
             this.btn_refresh.Size = new System.Drawing.Size(183, 43);
-            this.btn_refresh.TabIndex = 9;
-            this.btn_refresh.Text = "Tải lại";
-            this.btn_refresh.UseVisualStyleBackColor = true;
-            this.btn_refresh.Click += new System.EventHandler(this.button1_Click);
+            this.btn_refresh.TabIndex = 19;
+            this.btn_refresh.Text = "TẢI LẠI";
+            this.btn_refresh.UseVisualStyleBackColor = false;
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(920, 324);
+            this.btn_clear.BackColor = System.Drawing.Color.DarkOrange;
+            this.btn_clear.ForeColor = System.Drawing.Color.White;
+            this.btn_clear.Location = new System.Drawing.Point(914, 12);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(183, 43);
-            this.btn_clear.TabIndex = 9;
-            this.btn_clear.Text = "Clear";
-            this.btn_clear.UseVisualStyleBackColor = true;
-            this.btn_clear.Click += new System.EventHandler(this.button1_Click);
+            this.btn_clear.TabIndex = 20;
+            this.btn_clear.Text = "CLEAR";
+            this.btn_clear.UseVisualStyleBackColor = false;
             // 
             // btn_back
             // 
             this.btn_back.BackColor = System.Drawing.Color.DarkGray;
-            this.btn_back.Location = new System.Drawing.Point(1011, 12);
+            this.btn_back.Location = new System.Drawing.Point(26, 18);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(126, 38);
             this.btn_back.TabIndex = 10;
-            this.btn_back.Text = "Quay lại";
+            this.btn_back.Text = "QUAY LẠI";
             this.btn_back.UseVisualStyleBackColor = false;
+            // 
+            // btn_search
+            // 
+            this.btn_search.BackColor = System.Drawing.Color.Olive;
+            this.btn_search.ForeColor = System.Drawing.Color.White;
+            this.btn_search.Location = new System.Drawing.Point(358, 416);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(144, 39);
+            this.btn_search.TabIndex = 9;
+            this.btn_search.Text = "TÌM";
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(22, 329);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(65, 24);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "CMND:";
+            // 
+            // txt_idCard
+            // 
+            this.txt_idCard.Location = new System.Drawing.Point(26, 356);
+            this.txt_idCard.Name = "txt_idCard";
+            this.txt_idCard.Size = new System.Drawing.Size(205, 26);
+            this.txt_idCard.TabIndex = 4;
             // 
             // FormEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1149, 1050);
+            this.ClientSize = new System.Drawing.Size(1116, 1050);
             this.Controls.Add(this.btn_back);
+            this.Controls.Add(this.btn_search);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.btn_delete);
@@ -524,9 +710,11 @@
             this.Controls.Add(this.dtp_dayend);
             this.Controls.Add(this.dtp_daystart);
             this.Controls.Add(this.dtp_dob);
-            this.Controls.Add(this.txt_idCardNumber);
+            this.Controls.Add(this.txt_search);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.txt_idCard);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.txt_address);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -550,10 +738,9 @@
             this.Controls.Add(this.txt_lastName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.data_Emp);
-            this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "FormEmployee";
-            this.Text = "x``";
+            this.Text = "QUẢN LÝ NHÂN VIÊN";
             this.Load += new System.EventHandler(this.FormEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_Emp)).EndInit();
             this.ResumeLayout(false);
@@ -562,8 +749,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView data_Emp;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_lastName;
@@ -573,7 +758,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_address;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_idCardNumber;
+        private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.DateTimePicker dtp_dob;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -603,5 +788,24 @@
         private System.Windows.Forms.Button btn_refresh;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txt_idCard;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dayofbirth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hometown;
+        private System.Windows.Forms.DataGridViewTextBoxColumn position;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phonenumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iccardnumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enddate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bonus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn branchWork;
     }
 }

@@ -85,7 +85,7 @@
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(149, 56);
             this.btn_Login.TabIndex = 3;
-            this.btn_Login.Text = "Đăng Nhập";
+            this.btn_Login.Text = "ĐĂNG NHẬP";
             this.btn_Login.UseVisualStyleBackColor = true;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
@@ -113,7 +113,7 @@
             this.btn_quit.Name = "btn_quit";
             this.btn_quit.Size = new System.Drawing.Size(149, 56);
             this.btn_quit.TabIndex = 4;
-            this.btn_quit.Text = "Thoát";
+            this.btn_quit.Text = "THOÁT";
             this.btn_quit.UseVisualStyleBackColor = true;
             // 
             // pictureBox1

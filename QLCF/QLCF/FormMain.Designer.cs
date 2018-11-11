@@ -55,15 +55,16 @@
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1279, 46);
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label1.Size = new System.Drawing.Size(1279, 67);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Coffee Management";
+            this.label1.Text = "COFFEE MANAGEMENT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 49);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 87);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -72,17 +73,19 @@
             // 
             // btn_EmployeeManagement
             // 
-            this.btn_EmployeeManagement.Location = new System.Drawing.Point(23, 264);
+            this.btn_EmployeeManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_EmployeeManagement.ForeColor = System.Drawing.Color.White;
+            this.btn_EmployeeManagement.Location = new System.Drawing.Point(23, 324);
             this.btn_EmployeeManagement.Name = "btn_EmployeeManagement";
             this.btn_EmployeeManagement.Size = new System.Drawing.Size(200, 47);
             this.btn_EmployeeManagement.TabIndex = 1;
-            this.btn_EmployeeManagement.Text = "Quản Lý Nhân Viên";
-            this.btn_EmployeeManagement.UseVisualStyleBackColor = true;
+            this.btn_EmployeeManagement.Text = "QUẢN LÝ NHÂN VIÊN";
+            this.btn_EmployeeManagement.UseVisualStyleBackColor = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(264, 49);
+            this.pictureBox2.Location = new System.Drawing.Point(264, 87);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(200, 200);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -91,17 +94,19 @@
             // 
             // btn_Branch
             // 
-            this.btn_Branch.Location = new System.Drawing.Point(264, 264);
+            this.btn_Branch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Branch.ForeColor = System.Drawing.Color.White;
+            this.btn_Branch.Location = new System.Drawing.Point(264, 324);
             this.btn_Branch.Name = "btn_Branch";
             this.btn_Branch.Size = new System.Drawing.Size(200, 47);
             this.btn_Branch.TabIndex = 2;
-            this.btn_Branch.Text = "Quản Lý Chi Nhánh";
-            this.btn_Branch.UseVisualStyleBackColor = true;
+            this.btn_Branch.Text = "QUẢN LÝ CHI NHÁNH";
+            this.btn_Branch.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(514, 49);
+            this.pictureBox3.Location = new System.Drawing.Point(514, 87);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(200, 200);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,17 +115,19 @@
             // 
             // btn_Food
             // 
-            this.btn_Food.Location = new System.Drawing.Point(514, 264);
+            this.btn_Food.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btn_Food.ForeColor = System.Drawing.Color.White;
+            this.btn_Food.Location = new System.Drawing.Point(514, 324);
             this.btn_Food.Name = "btn_Food";
             this.btn_Food.Size = new System.Drawing.Size(200, 47);
             this.btn_Food.TabIndex = 3;
-            this.btn_Food.Text = "Quản Lý Thức Ăn";
-            this.btn_Food.UseVisualStyleBackColor = true;
+            this.btn_Food.Text = "QUẢN LÝ THỨC ĂN";
+            this.btn_Food.UseVisualStyleBackColor = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(767, 49);
+            this.pictureBox4.Location = new System.Drawing.Point(767, 87);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(200, 200);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -129,17 +136,19 @@
             // 
             // btn_Drink
             // 
-            this.btn_Drink.Location = new System.Drawing.Point(767, 264);
+            this.btn_Drink.BackColor = System.Drawing.Color.Pink;
+            this.btn_Drink.ForeColor = System.Drawing.Color.White;
+            this.btn_Drink.Location = new System.Drawing.Point(767, 324);
             this.btn_Drink.Name = "btn_Drink";
             this.btn_Drink.Size = new System.Drawing.Size(200, 47);
             this.btn_Drink.TabIndex = 4;
-            this.btn_Drink.Text = "Quản Lý Nước Uống";
-            this.btn_Drink.UseVisualStyleBackColor = true;
+            this.btn_Drink.Text = "QUẢN LÝ NƯỚC UỐNG";
+            this.btn_Drink.UseVisualStyleBackColor = false;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1024, 49);
+            this.pictureBox5.Location = new System.Drawing.Point(1024, 87);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(200, 200);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -148,21 +157,24 @@
             // 
             // btn_Revenue
             // 
-            this.btn_Revenue.Location = new System.Drawing.Point(1024, 264);
+            this.btn_Revenue.BackColor = System.Drawing.Color.Orchid;
+            this.btn_Revenue.ForeColor = System.Drawing.Color.White;
+            this.btn_Revenue.Location = new System.Drawing.Point(1024, 324);
             this.btn_Revenue.Name = "btn_Revenue";
             this.btn_Revenue.Size = new System.Drawing.Size(200, 47);
             this.btn_Revenue.TabIndex = 5;
-            this.btn_Revenue.Text = "Quản Lý Doanh Thu";
-            this.btn_Revenue.UseVisualStyleBackColor = true;
+            this.btn_Revenue.Text = "QUẢN LÝ DOANH THU";
+            this.btn_Revenue.UseVisualStyleBackColor = false;
             // 
             // lbl_realTime
             // 
             this.lbl_realTime.AutoSize = true;
             this.lbl_realTime.ForeColor = System.Drawing.Color.Blue;
-            this.lbl_realTime.Location = new System.Drawing.Point(19, 331);
+            this.lbl_realTime.Location = new System.Drawing.Point(19, 390);
             this.lbl_realTime.Name = "lbl_realTime";
-            this.lbl_realTime.Size = new System.Drawing.Size(0, 20);
+            this.lbl_realTime.Size = new System.Drawing.Size(36, 20);
             this.lbl_realTime.TabIndex = 3;
+            this.lbl_realTime.Text = "123";
             // 
             // btn_logout
             // 
@@ -179,7 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1279, 369);
+            this.ClientSize = new System.Drawing.Size(1279, 442);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.lbl_realTime);
             this.Controls.Add(this.btn_Revenue);

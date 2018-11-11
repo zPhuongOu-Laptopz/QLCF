@@ -108,6 +108,7 @@ namespace QLCF
 
         private void reLoad()
         {
+            
             List<Branch> list = new List<Branch>();
             list = Branch.SelectallObject();
 
